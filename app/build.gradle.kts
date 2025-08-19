@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.playgroundapp"
+    namespace = "com.example.githubexplorer"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.playgroundapp"
+        applicationId = "com.example.githubexplorer"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -66,11 +66,9 @@ dependencies {
 
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
-    implementation(libs.ktor.client.core)
-    implementation(libs.ktor.client.cio)
     implementation(libs.google.gson)
-    implementation(libs.ktor.client.content.negotiation)
-    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.bundles.retrofit.bundle)
+    implementation(libs.glide.image.loader)
 
     implementation(project(":adapterdelegate"))
 }

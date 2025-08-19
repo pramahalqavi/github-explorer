@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">playgroundapp</string>
+    <string name="app_name">github-explorer</string>
+    <string name="users">Users</string>
+    <string name="search_hint">Search users</string>
+    <string name="retry">Retry</string>
+    <string name="error_message">An error has occurred. Please retry.</string>
+    <string name="empty_message">No data</string>
 </resources>

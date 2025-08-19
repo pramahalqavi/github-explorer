@@ -1,2 +1,2 @@
-# playgroundapp
-Native android app playground
+# github-explorer
+Github profile explorer app

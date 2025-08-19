@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "playgroundapp"
+rootProject.name = "github-explorer"
 include(":app")
 include(":adapterdelegate")
