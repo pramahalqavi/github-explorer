@@ -9,7 +9,7 @@ class HeaderInterceptor : Interceptor {
         val originalRequest = chain.request()
         val newRequest = originalRequest.newBuilder()
             .header("User-Agent", "request")
-            .header("Authorization", "Bearer ${BuildConfig.GITHUB_API_TOKEN}")
+//            .header("Authorization", "Bearer ${BuildConfig.GITHUB_API_TOKEN}")
             .build()
         return chain.proceed(newRequest)
     }
