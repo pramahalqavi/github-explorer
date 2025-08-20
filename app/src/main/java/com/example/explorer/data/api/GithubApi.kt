@@ -13,7 +13,7 @@ interface GithubApi {
     @GET("users")
     suspend fun getUsers(
         @Query("since") since: Int? = null,
-        @Query("per_page") perPage: Int = 30
+        @Query("per_page") perPage: Int = 50
     ): List<UserEntity>
 
     @GET("search/users")

@@ -15,7 +15,7 @@ data class UserDetailUiModel(
     val publicRepos: Int,
     val followers: Int,
     val following: Int
-) {
+) : UserDetailAdapterModel {
     companion object {
         fun fromEntity(entity: UserDetailEntity): UserDetailUiModel {
             return UserDetailUiModel(

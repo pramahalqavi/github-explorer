@@ -7,7 +7,6 @@ interface UserListViewModel {
     val userListLiveData: LiveData<List<UserUiModel>>
     val isLoadingLiveData: LiveData<Boolean>
     val errorLiveData: LiveData<Throwable?>
-    fun isLoadingPagination(): Boolean
 
     fun fetchUsers(isInitial: Boolean)
     fun searchUsers(query: String = "")

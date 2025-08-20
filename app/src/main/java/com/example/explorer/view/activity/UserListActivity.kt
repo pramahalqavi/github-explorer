@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.explorer.utils.Router
+import com.example.explorer.utils.setLightStatusBar
 import com.example.explorer.view.adapter.UserListAdapterDelegate
 import com.example.explorer.view.viewmodel.UserListViewModel
 import com.example.explorer.view.viewmodel.UserListViewModelImpl
@@ -39,6 +40,7 @@ class UserListActivity : ComponentActivity() {
     }
 
     private fun initView() {
+        window.setLightStatusBar(isLight = true)
         with(binding) {
             rvUsers.adapter = delegateAdapter
             rvUsers.layoutManager = LinearLayoutManager(this@UserListActivity)
@@ -50,7 +52,7 @@ class UserListActivity : ComponentActivity() {
                     val lastVisibleItem = layoutManager.findLastVisibleItemPosition()
 
                     val visibleThreshold = 5
-                    if (!viewModel.isLoadingPagination() && lastVisibleItem >= totalItemCount - visibleThreshold) {
+                    if (lastVisibleItem >= totalItemCount - visibleThreshold) {
                         viewModel.searchUsersNextPage()
                     }
                 }

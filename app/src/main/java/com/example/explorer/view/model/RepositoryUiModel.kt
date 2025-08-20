@@ -8,7 +8,7 @@ data class RepositoryUiModel(
     val description: String,
     val htmlUrl: String,
     val language: String
-) {
+) : UserDetailAdapterModel {
     companion object {
         fun fromEntity(entity: Repository): RepositoryUiModel {
             return RepositoryUiModel(

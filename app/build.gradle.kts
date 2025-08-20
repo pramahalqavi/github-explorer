@@ -12,12 +12,15 @@ android {
 
     defaultConfig {
         applicationId = "com.example.githubexplorer"
-        minSdk = 24
+        minSdk = 21
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "GITHUB_API_BASE_URL", "\"https://api.github.com/\"")
+        buildConfigField("String", "GITHUB_API_TOKEN", "\" \"")
     }
 
     buildTypes {
@@ -39,6 +42,7 @@ android {
     buildFeatures {
         compose = true
         viewBinding = true
+        buildConfig = true
     }
 }
 
