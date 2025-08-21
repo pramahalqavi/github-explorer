@@ -79,7 +79,7 @@ class UserDetailActivity : ComponentActivity() {
         with(binding) {
             tvStatus.visibility = View.VISIBLE
             btnRetry.visibility = View.VISIBLE
-            tvStatus.text = getString(R.string.error_message)
+            tvStatus.text = getString(R.string.error_no_retry)
             btnRetry.text = getString(R.string.back)
             btnRetry.setOnClickListener {
                 finish()

@@ -89,3 +89,6 @@ Papp/src/main/java/com/example/explorer/view/adapter/UserDetailAdapterDelegate.k
 Papp/src/main/java/com/example/explorer/view/adapter/RepositoryAdapterDelegate.kt,0/1/0142c45fb1fbc0865fcb70d1894dda685d027087
 q
 Aapp/src/main/java/com/example/explorer/utils/HeaderInterceptor.kt,4/e/4e0170c1ea550cbb9ce0bb741dc64d07a7f5692f
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
