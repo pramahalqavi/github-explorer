@@ -17,7 +17,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.example.explorer.HiltTestRunner"
 
         buildConfigField("String", "GITHUB_API_BASE_URL", "\"https://api.github.com/\"")
         buildConfigField("String", "GITHUB_API_TOKEN", "\" \"")
@@ -35,6 +35,11 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+    testOptions {
+        unitTests.all { test: Test ->
+            test.useJUnitPlatform()
+        }
     }
     kotlinOptions {
         jvmTarget = "11"
@@ -60,13 +65,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
@@ -75,6 +73,21 @@ dependencies {
     implementation(libs.glide.image.loader)
 
     implementation(project(":adapterdelegate"))
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.dagger.hilt.test)
+    androidTestAnnotationProcessor(libs.dagger.hilt.compiler)
+    kaptAndroidTest(libs.dagger.hilt.android.compiler)
+    testImplementation(libs.bundles.junit5.api.bundle)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+    testRuntimeOnly(libs.bundles.junit5.engine.bundle)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
+    testImplementation(kotlin("test"))
 }
 
 kapt {

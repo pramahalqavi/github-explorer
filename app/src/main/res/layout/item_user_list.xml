@@ -27,6 +27,7 @@
         android:maxLines="3"
         app:layout_constraintStart_toEndOf="@id/iv_avatar"
         app:layout_constraintTop_toTopOf="@id/iv_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="username"/>
 
