@@ -1,6 +1,6 @@
 package com.example.explorer.view.model
 
-import com.example.explorer.data.model.UserDetailEntity
+import com.example.explorer.data.model.UserDetail
 
 data class UserDetailUiModel(
     val login: String,
@@ -17,7 +17,7 @@ data class UserDetailUiModel(
     val following: Int
 ) : UserDetailAdapterModel {
     companion object {
-        fun fromEntity(entity: UserDetailEntity): UserDetailUiModel {
+        fun fromEntity(entity: UserDetail): UserDetailUiModel {
             return UserDetailUiModel(
                 login = entity.login.orEmpty(),
                 id = entity.id ?: 0,

@@ -22,6 +22,7 @@ constraintlayout = "2.2.1"
 recyclerview = "1.2.1"
 retrofit = "3.0.0"
 glide = "4.16.0"
+room = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -63,6 +64,9 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 retrofit-client = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 glide-image-loader = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

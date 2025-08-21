@@ -2,7 +2,7 @@ package com.example.explorer.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class UserDetailEntity(
+data class UserDetail(
     val login: String? = null,
     val id: Int? = null,
     val name: String? = null,

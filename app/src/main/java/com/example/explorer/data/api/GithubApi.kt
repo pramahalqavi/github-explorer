@@ -2,8 +2,8 @@ package com.example.explorer.data.api
 
 import com.example.explorer.data.model.Repository
 import com.example.explorer.data.model.SearchResponse
-import com.example.explorer.data.model.UserDetailEntity
-import com.example.explorer.data.model.UserEntity
+import com.example.explorer.data.model.UserDetail
+import com.example.explorer.data.model.User
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -14,7 +14,7 @@ interface GithubApi {
     suspend fun getUsers(
         @Query("since") since: Int? = null,
         @Query("per_page") perPage: Int = 50
-    ): List<UserEntity>
+    ): List<User>
 
     @GET("search/users")
     suspend fun searchUsers(
@@ -26,7 +26,7 @@ interface GithubApi {
     @GET("users/{username}")
     suspend fun getUserDetails(
         @Path("username") username: String
-    ): UserDetailEntity
+    ): UserDetail
 
     @GET("users/{username}/repos")
     suspend fun getUserRepositories(

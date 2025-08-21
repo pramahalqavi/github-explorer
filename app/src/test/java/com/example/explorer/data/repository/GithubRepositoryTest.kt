@@ -3,8 +3,8 @@ package com.example.explorer.data.repository
 import com.example.explorer.data.api.GithubApi
 import com.example.explorer.data.model.Repository
 import com.example.explorer.data.model.SearchResponse
-import com.example.explorer.data.model.UserDetailEntity
-import com.example.explorer.data.model.UserEntity
+import com.example.explorer.data.model.UserDetail
+import com.example.explorer.data.model.User
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.RelaxedMockK
@@ -38,8 +38,8 @@ class GithubRepositoryTest {
     fun test_getUsers_shouldReturnExpectedResult(isSuccess: Boolean) {
         if (isSuccess) {
             coEvery { githubApi.getUsers(any(), any()) } returns listOf(
-                UserEntity("testUser1", 1, "https://avatar.url/1"),
-                UserEntity("testUser2", 2, "https://avatar.url/2")
+                User("testUser1", 1, "https://avatar.url/1"),
+                User("testUser2", 2, "https://avatar.url/2")
             )
         } else {
             coEvery { githubApi.getUsers(any(), any()) } throws IllegalStateException()
@@ -69,8 +69,8 @@ class GithubRepositoryTest {
                 totalCount = 2,
                 incompleteResults = false,
                 items = listOf(
-                    UserEntity("testUser1", 1, "https://avatar.url/1"),
-                    UserEntity("testUser2", 2, "https://avatar.url/2")
+                    User("testUser1", 1, "https://avatar.url/1"),
+                    User("testUser2", 2, "https://avatar.url/2")
                 )
             )
         } else {
@@ -97,7 +97,7 @@ class GithubRepositoryTest {
     @ValueSource(booleans = [true, false])
     fun test_getUserDetails_shouldReturnExpectedResult(isSuccess: Boolean) {
         if (isSuccess) {
-            coEvery { githubApi.getUserDetails(any()) } returns UserDetailEntity(
+            coEvery { githubApi.getUserDetails(any()) } returns UserDetail(
                 login = "testuser",
                 id = 1,
                 name = "Test User",
