@@ -1,6 +1,5 @@
 package com.example.explorer.data.repository
 
-import android.util.Log
 import com.example.explorer.data.api.GithubApi
 import com.example.explorer.view.model.RepositoryUiModel
 import com.example.explorer.view.model.SearchUiModel

@@ -122,3 +122,5 @@ q
 Aapp/src/androidTest/java/com/example/explorer/di/FakeAppModule.kt,4/8/4831e970b32200d582e555e423a9c0f99c706029
 …
 Uapp/src/androidTest/java/com/example/explorer/view/activity/UserDetailActivityTest.kt,c/9/c92e52ba88eab25d193e8a67b317931328f28db2
+h
+8app/src/main/java/com/example/explorer/ui/theme/Color.kt,d/e/de58c5eb9bc8895509fb3bc3bef3324ea2e35f96
